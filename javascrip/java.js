@@ -9,3 +9,4 @@ dropdowns.forEach((dropdown) => {
     msg.classList.toggle("closed");
   });
 });
+/* Cualquier cosa */
