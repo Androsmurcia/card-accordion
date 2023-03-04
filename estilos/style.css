@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to top right, blue, pink);
+  background-attachment: fixed;
+}
+.centrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15% auto;
+}
+header {
+  position: absolute;
+  z-index: 10px;
+  left: 20%;
+}
+.contenedor {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 1em;
+  z-index: 1px;
+  width: 50%;
+  height: 300px;
+}
+
+header {
+  padding-right: 30px;
+}
+
+.pantalla {
+  z-index: 10px;
+  width: 400px;
+  position: absolute;
+}
+
+.sombra {
+  width: 400px;
+  z-index: 1px;
+}
+
+.desplegable {
+  width: 25%;
+  position: absolute;
+  right: 25%;
+}
+.desplegable ul {
+  list-style: none;
+}
+
+.desplegable ul div.dropdown-text {
+  background-color: aqua;
+  margin: 10px 20px;
+  overflow: hidden;
+  max-height: 300px;
+  transition: max-height 0.5s ease-in;
+}
+
+.desplegable ul div.dropdown-text.closed {
+  max-height: 0px;
+}
+
+.desplegable ul li {
+  margin: 10px;
+}
+
+.desplegable ul .click :nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+
