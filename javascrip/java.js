@@ -2,11 +2,15 @@ const dropdowns = Array.from(document.querySelectorAll(".click"));
 
 dropdowns.forEach((dropdown) => {
   dropdown.addEventListener("click", (event) => {
-    dropdowns.forEach((dropdown) => {
-      dropdown.children[1].classList.add("closed");
-    });
     const msg = event.currentTarget.children[1];
-    msg.classList.toggle("closed");
+    const isClosed = msg.classList.contains("closed");
+
+    dropdowns.forEach((otherDropdown) => {
+      otherDropdown.children[1].classList.add("closed");
+    });
+
+    if (isClosed) {
+      msg.classList.remove("closed");
+    }
   });
 });
-/* Cualquier cosa */
